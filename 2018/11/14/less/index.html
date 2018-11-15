@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="魏永召">
+
+
+
+<meta name="description" content="less的简介less的产生作为一门标记性语言，CSS 的语法相对简单，对使用者的要求较低，但同时也带来一些问题：CSS需要书写大量看似没有逻辑的代码，不方便维护及扩展，不利于复用，尤其对于非前端开发工程师来讲，往往会因为缺少 CSS 编写经验而很难写出组织良好且易于维护的 CSS 代码，造成这些困难的很大原因源于 CSS 是一门非程序式语言，没有变量、函数、SCOPE（作用域）等概念。LESS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="魏永召的博客">
+<meta property="og:url" content="http://yoursite.com/2018/11/14/less/index.html">
+<meta property="og:site_name" content="魏永召的博客">
+<meta property="og:description" content="less的简介less的产生作为一门标记性语言，CSS 的语法相对简单，对使用者的要求较低，但同时也带来一些问题：CSS需要书写大量看似没有逻辑的代码，不方便维护及扩展，不利于复用，尤其对于非前端开发工程师来讲，往往会因为缺少 CSS 编写经验而很难写出组织良好且易于维护的 CSS 代码，造成这些困难的很大原因源于 CSS 是一门非程序式语言，没有变量、函数、SCOPE（作用域）等概念。LESS">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-14T09:51:46.004Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="魏永召的博客">
+<meta name="twitter:description" content="less的简介less的产生作为一门标记性语言，CSS 的语法相对简单，对使用者的要求较低，但同时也带来一些问题：CSS需要书写大量看似没有逻辑的代码，不方便维护及扩展，不利于复用，尤其对于非前端开发工程师来讲，往往会因为缺少 CSS 编写经验而很难写出组织良好且易于维护的 CSS 代码，造成这些困难的很大原因源于 CSS 是一门非程序式语言，没有变量、函数、SCOPE（作用域）等概念。LESS">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="魏永召的博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>魏永召的博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: false
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/Coding.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">魏永召</a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:yongzhaow@126.com" title="Email"></a>
+                            
+                                <a class="fa QQ" href="https://user.qzone.qq.com/1215387579" title="QQ"></a>
+                            
+                                <a class="fa 微信" href="/./img/erweima.jpg" title="微信"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">魏永召</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/Coding.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">魏永召</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:yongzhaow@126.com" title="Email"></a>
+                            
+                                <a class="fa QQ" target="_blank" href="https://user.qzone.qq.com/1215387579" title="QQ"></a>
+                            
+                                <a class="fa 微信" target="_blank" href="/./img/erweima.jpg" title="微信"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-less" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/11/14/less/" class="article-date">
+      <time datetime="2018-11-14T09:50:43.887Z" itemprop="datePublished">2018-11-14</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="less的简介"><a href="#less的简介" class="headerlink" title="less的简介"></a>less的简介</h2><h3 id="less的产生"><a href="#less的产生" class="headerlink" title="less的产生"></a>less的产生</h3><p>作为一门标记性语言，CSS 的语法相对简单，对使用者的要求较低，但同时也带来一些问题：CSS需要书写大量看似没有逻辑的代码，不方便维护及扩展，不利于复用，尤其对于非前端开发工程师来讲，往往会因为缺少 CSS 编写经验而很难写出组织良好且易于维护的 CSS 代码，造成这些困难的很大原因源于 CSS 是一门非程序式语言，没有变量、函数、SCOPE（作用域）等概念。LESS 为 Web 开发者带来了福音，它在 CSS 的语法基础之上，引入了变量，Mixin（混入），运算以及函数等功能，大大简化了 CSS 的编写，并且降低了 CSS 的维护成本，就像它的名称所说的那样，LESS 可以让我们用更少的代码做更多的事情。</p>
+<h3 id="less的安装"><a href="#less的安装" class="headerlink" title="less的安装"></a>less的安装</h3><ol>
+<li>安装less需要下载nodejs<a href="http://nodejs.org/dist/" target="_blank" rel="noopener">下载地址</a></li>
+<li>下载安装nodejs后使用cmd命令node -v查看版本</li>
+<li>基于nodejs安装less：使用cmd命令npm install -g less</li>
+</ol>
+<h3 id="less的编译"><a href="#less的编译" class="headerlink" title="less的编译"></a>less的编译</h3><p>​    本质上，LESS 包含一套自定义的语法及一个解析器，用户根据这些语法定义自己的样式规则，这些规则最终会通过解析器，编译生成对应的 CSS 文件。LESS 并没有裁剪 CSS 原有的特性，更不是用来取代 CSS 的，而是在现有 CSS 语法的基础上，为 CSS 加入程序式语言的特性。</p>
+<p>​    把less文件执行编译成css文件需要在终端输入一下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lessc 目标文件地址 生成文件地址</span><br></pre></td></tr></table></figure>
+<p>在开发过程当中如果要预览less，每次都要执行编译命令，为了方便可以使用部分编辑器中less自动编译功能。（vscode中是使用插件easy less）</p>
+<h2 id="less的使用"><a href="#less的使用" class="headerlink" title="less的使用"></a>less的使用</h2><h3 id="在浏览器中对less文件进行预览"><a href="#在浏览器中对less文件进行预览" class="headerlink" title="在浏览器中对less文件进行预览"></a>在浏览器中对less文件进行预览</h3><p>在不使用编辑器的插件的情况下在浏览器中对less文件进行预览（要刷新页面），使用less.js的过程中不能以文件形式打开，要在http://形式打开。因为less是去异步加载less源码，js解析出css代码，追加到头部的style。</p>
+<ol>
+<li><p>需要下载less.js插件，<a href="http://github.com/less/less.js" target="_blank" rel="noopener">下载地址</a></p>
+</li>
+<li><p>引入下载的less.js文件</p>
+</li>
+<li><p>在引入less文件的时候要进行引入类型的声明</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> type=<span class="string">"text/less"</span> href=<span class="string">"index.less"</span>&gt;</span><br><span class="line">&lt;script src=<span class="string">"less.min.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>也可以在不刷新页面的情况下对less文件进行实时的预览（热更新），使用less.js提供的watch方法，需要加入以下代码</p>
+<p><code>&lt;script&gt;less.watch()&lt;/script&gt;</code></p>
+<p>以上使用方法解析的时间长，只适用于开发阶段的预览，上线的环境还是要使用css</p>
+<h3 id="less的基本语法"><a href="#less的基本语法" class="headerlink" title="less的基本语法"></a>less的基本语法</h3><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><ol>
+<li>/<em> 注释内容</em>/在css中也支持，所以编译到css中也会显示</li>
+<li>//注释内容    只有less中支持，所以不会编译到css中</li>
+</ol>
+<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p>变量的声明规范</p>
+<ol>
+<li><p>必须以@符号开头</p>
+</li>
+<li><p>不能包含特殊字符</p>
+</li>
+<li><p>不能以数字开头</p>
+</li>
+<li><p>区分大小写</p>
+<p>基本使用实例</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@mainColor:</span><span class="number">#ccc</span>;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>:<span class="variable">@mainColor</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用变量的时候有拼接的情况，要使用{}包裹变量</p>
+<p>使用示例</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@company:</span>taobao;</span><br><span class="line"><span class="selector-class">.@&#123;company&#125;</span><span class="selector-tag">_nav</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line">拼接后的<span class="selector-tag">css</span></span><br><span class="line"><span class="selector-class">.taobao_nav</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
+<h4 id="mixin混入"><a href="#mixin混入" class="headerlink" title="mixin混入"></a>mixin混入</h4><ol>
+<li><p>样式混入</p>
+<p>在样式中混入其他的样式，在样式中调用要使用的类选择器、id选择器，这种使用方法会把公共的类或者id都编译到css选择器中，会造成代码的冗余。</p>
+</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.border</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>:<span class="number">1px</span> solid red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="selector-class">.border</span>();</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>:<span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box2</span> &#123;</span><br><span class="line">  <span class="selector-class">.border</span>();</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>:<span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>函数混入</p>
+<p>在类选择器或者id选择器后边添加一个()后就转换成了函数，就无法将代码编译到css中了，可以在()中添加参数就可以让方法得到高度复用了。</p>
+<p>注意：</p>
+<ol>
+<li>如果函数有参数但是没有默认值，调用的时候必须传参。</li>
+<li>如果给了参数默认值，调动的时候传不传参数都可以了</li>
+</ol>
+<p>使用示例：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这是需要传参的函数（没有默认值）</span></span><br><span class="line"><span class="selector-class">.f_left</span>(<span class="variable">@direction</span>)&#123;</span><br><span class="line">  <span class="attribute">float</span>:<span class="variable">@direction</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//这是设置了默认值了，不传参直接使用默认值</span></span><br><span class="line"><span class="selector-class">.f_left</span>(<span class="variable">@direction</span>:left)&#123;</span><br><span class="line">  <span class="attribute">float</span>:<span class="variable">@direction</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果参数在函数内需要拼接，函数中要使用{}包裹参数。也可以传入多个参数。</p>
+</li>
+</ol>
+<h4 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h4><p>根据元素的上下级或者伪类选择器之间的结构关系进行嵌套，但是伪类选择器使用的时候中间没有空格所以要使用&amp;连接</p>
+<p>使用示例：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.topBar</span>&#123;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">12px</span>;</span><br><span class="line">  &gt; <span class="selector-class">.container</span>&#123;</span><br><span class="line">    &gt; <span class="selector-class">.row</span>&#123;</span><br><span class="line">      &gt; <span class="selector-tag">div</span>&#123;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">        <span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">        <span class="attribute">border-right</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</span><br><span class="line">        <span class="attribute">text-align</span>: center;</span><br><span class="line">        <span class="selector-tag">&amp;</span><span class="selector-pseudo">:last-child</span>&#123;</span><br><span class="line">          <span class="attribute">border-right</span>: none;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.btn_register</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">3px</span> <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#e92322</span>;</span><br><span class="line">    <span class="selector-tag">&amp;</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">      <span class="attribute">border-color</span>: <span class="number">#e92322</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h4><p>导入的基本语法</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@inport</span> <span class="string">"variables"</span>;</span><br></pre></td></tr></table></figure>
+<p>导入的时候被依赖的文件要先导入，没有依赖关系的导入不分先后</p>
+<p>导入less文件的时候可以省略后缀，也可以导入css文件，但是导入css文件的时候要加后缀名。</p>
+<h4 id="运算-amp-内置函数"><a href="#运算-amp-内置函数" class="headerlink" title="运算&amp;内置函数"></a>运算&amp;内置函数</h4><h5 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h5><ol>
+<li>数值运算：可以把不确定的数值定义为变量在样式中使用，如果有单位结构会继承</li>
+<li>色值运算：可以直接颜色相加 red+green，也可以使用十六进制相加#111+#333。</li>
+</ol>
+<h5 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h5><p>内置函数可以参考地址：<a href="http://www.css88.com/doc/less/functions/#color-operations" target="_blank" rel="noopener">中文地址</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/11/14/less/"></a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">魏永召</a></p>
+        <p><span>发布时间:</span>2018-11-14, 17:50:43</p>
+        <p><span>最后更新:</span>2018-11-14, 17:51:46</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/11/14/less/" title="">http://yoursite.com/2018/11/14/less/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/11/14/less/　　作者: 魏永召" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/11/14/markdown/">
+                    markdown
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#less的简介"><span class="toc-number">1.</span> <span class="toc-text">less的简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#less的产生"><span class="toc-number">1.1.</span> <span class="toc-text">less的产生</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#less的安装"><span class="toc-number">1.2.</span> <span class="toc-text">less的安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#less的编译"><span class="toc-number">1.3.</span> <span class="toc-text">less的编译</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#less的使用"><span class="toc-number">2.</span> <span class="toc-text">less的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在浏览器中对less文件进行预览"><span class="toc-number">2.1.</span> <span class="toc-text">在浏览器中对less文件进行预览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#less的基本语法"><span class="toc-number">2.2.</span> <span class="toc-text">less的基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#注释"><span class="toc-number">2.2.1.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#变量"><span class="toc-number">2.2.2.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mixin混入"><span class="toc-number">2.2.3.</span> <span class="toc-text">mixin混入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#嵌套"><span class="toc-number">2.2.4.</span> <span class="toc-text">嵌套</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#导入"><span class="toc-number">2.2.5.</span> <span class="toc-text">导入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#运算-amp-内置函数"><span class="toc-number">2.2.6.</span> <span class="toc-text">运算&amp;内置函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#运算"><span class="toc-number">2.2.6.1.</span> <span class="toc-text">运算</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#内置函数"><span class="toc-number">2.2.6.2.</span> <span class="toc-text">内置函数</span></a></li></ol></li></ol></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"　| 魏永召的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/11/14/markdown/" title="下一篇: markdown">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/11/14/less/">less</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/14/markdown/">markdown</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/13/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2018 魏永召
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
