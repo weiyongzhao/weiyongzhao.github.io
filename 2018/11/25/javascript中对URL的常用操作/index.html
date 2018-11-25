@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="魏永召">
+
+
+
+<meta name="description" content="javascript中对URL的常用操作获取或设置地址栏中的信息window.location.hash设置或者获取href属性中在#后边的分段 window.location.host设置或者获取 location 或 URL 的 hostname 和 port 号码 window.location.hostname设置或获取 location 或 URL 的主机名称部分 window.loca">
+<meta property="og:type" content="article">
+<meta property="og:title" content="魏永召的博客">
+<meta property="og:url" content="http://yoursite.com/2018/11/25/javascript中对URL的常用操作/index.html">
+<meta property="og:site_name" content="魏永召的博客">
+<meta property="og:description" content="javascript中对URL的常用操作获取或设置地址栏中的信息window.location.hash设置或者获取href属性中在#后边的分段 window.location.host设置或者获取 location 或 URL 的 hostname 和 port 号码 window.location.hostname设置或获取 location 或 URL 的主机名称部分 window.loca">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-25T12:48:26.200Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="魏永召的博客">
+<meta name="twitter:description" content="javascript中对URL的常用操作获取或设置地址栏中的信息window.location.hash设置或者获取href属性中在#后边的分段 window.location.host设置或者获取 location 或 URL 的 hostname 和 port 号码 window.location.hostname设置或获取 location 或 URL 的主机名称部分 window.loca">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="魏永召的博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>魏永召的博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: false
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/Coding.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">魏永召</a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:yongzhaow@126.com" title="Email"></a>
+                            
+                                <a class="fa QQ" href="https://user.qzone.qq.com/1215387579" title="QQ"></a>
+                            
+                                <a class="fa 微信" href="/./img/erweima.jpg" title="微信"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">魏永召</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/Coding.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">魏永召</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:yongzhaow@126.com" title="Email"></a>
+                            
+                                <a class="fa QQ" target="_blank" href="https://user.qzone.qq.com/1215387579" title="QQ"></a>
+                            
+                                <a class="fa 微信" target="_blank" href="/./img/erweima.jpg" title="微信"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-javascript中对URL的常用操作" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/11/25/javascript中对URL的常用操作/" class="article-date">
+      <time datetime="2018-11-25T12:47:44.951Z" itemprop="datePublished">2018-11-25</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        
+          <h1 id="javascript中对URL的常用操作"><a href="#javascript中对URL的常用操作" class="headerlink" title="javascript中对URL的常用操作"></a>javascript中对URL的常用操作</h1><h3 id="获取或设置地址栏中的信息"><a href="#获取或设置地址栏中的信息" class="headerlink" title="获取或设置地址栏中的信息"></a>获取或设置地址栏中的信息</h3><p>window.location.hash设置或者获取href属性中在#后边的分段</p>
+<p>window.location.host设置或者获取 location 或 URL 的 hostname 和 port 号码</p>
+<p>window.location.hostname设置或获取 location 或 URL 的主机名称部分</p>
+<p>window.location.href 设置或获取整个 URL 为字符串</p>
+<p>window.location.pathname 设置或获取对象指定的文件名或路径</p>
+<p>window.location.port 设置或获取与 URL 关联的端口号码</p>
+<p>window.location.protocol  设置或获取 URL 的协议部分</p>
+<p>window.location.search 设置或获取 href 属性中跟在问号后面的部分</p>
+<p>window.location.replace(url)：用传入的URL字符串替代当前的URL，该方法会将历史记录中的URL一并替换掉，也就是说，这个方法会覆盖之前的历史记录；</p>
+<p>window.location.reload()：重新加载当前URL，相当于刷新；</p>
+<p>window.location.assign(url)：加载传入的URL，该方法不会覆盖之前的历史记录；</p>
+<h3 id="刷新"><a href="#刷新" class="headerlink" title="刷新"></a>刷新</h3><p>window.location.href=window.location.href</p>
+<p>window.location.Reload()</p>
+<p>window.location.replace(document.referrer)</p>
+<p>都是刷新当前页面。区别在于是否有提交数据。当有提交数据时，window.location.Reload()会提示是否提交，window.location.href=window.location.href;则是向指定的url提交数据</p>
+<h3 id="返回"><a href="#返回" class="headerlink" title="返回"></a>返回</h3><p>window.history.go(-1)   返回上一页，go函数内的数字是正表示前进几页，是负数表示后退几页，history.length判断历史几页。此种方法不但完成页面的跳转，而且刷新页面</p>
+<p>history.back();　 后退 </p>
+<p>history.forward(); 前进   只跳转，不刷新页面</p>
+<h3 id="JS中对URL进行转码与解码"><a href="#JS中对URL进行转码与解码" class="headerlink" title="JS中对URL进行转码与解码"></a>JS中对URL进行转码与解码</h3><h5 id="escape-和-unescape"><a href="#escape-和-unescape" class="headerlink" title="escape 和 unescape"></a>escape 和 unescape</h5><p>escape()不能直接用于URL编码，它的真正作用是返回一个字符的Unicode编码值。</p>
+<p>采用unicode字符集对指定的字符串除0-255以外进行编码。所有的空格符、标点符号、特殊字符以及更多有联系非ASCII字符都将被转化成%xx格式的字符编码（xx等于该字符在字符集表里面的编码的16进制数字）。比如，空格符对应的编码是%20。<br>escape不编码字符有69个：*，+，-，.，/，@，_，0-9，a-z，A-Z。</p>
+<p>escape()函数用于js对字符串进行编码<strong>，</strong>不常用。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> url = <span class="string">"http://localhost:8080/pro?a=1&amp;b=张三&amp;c=aaa"</span>;</span><br><span class="line">　　<span class="built_in">escape</span>(url)  --&gt;   http%<span class="number">3</span>A<span class="comment">//localhost%3A8080/pro%3Fa%3D1%26b%3D%u5F20%u4E09%26c%3Daaa</span></span><br></pre></td></tr></table></figure>
+<h5 id="encodeURI-和-decodeURI"><a href="#encodeURI-和-decodeURI" class="headerlink" title="encodeURI 和 decodeURI"></a><strong>encodeURI 和 decodeURI</strong></h5><p>把URI字符串采用UTF-8编码格式转化成escape各式的字符串。<br>encodeURI不编码字符有82个：!，#，$，&amp;，’，(，)，*，+，,，-，.，/，:，;，=，?，@，_，~，0-9，a-z，A-Z</p>
+<p> encodeURI()用于整个url编码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">　　var url = &quot;http://localhost:8080/pro?a=1&amp;b=张三&amp;c=aaa&quot;;</span><br><span class="line">　　encodeURI(url)  --&gt;   http://localhost:8080/pro?a=1&amp;b=%E5%BC%A0%E4%B8%89&amp;c=aaa</span><br></pre></td></tr></table></figure>
+<p><strong>encodeURIComponent 和 decodeURIComponent</strong></p>
+<p>与encodeURI()的区别是，它用于对URL的组成部分进行个别编码，而不用于对整个URL进行编码。</p>
+<p>因此，”; / ? : @ &amp; = + $ , #”，这些在encodeURI()中不被编码的符号，在encodeURIComponent()中统统会被编码。至于具体的编码方法，两者是一样。把URI字符串采用UTF-8编码格式转化成escape格式的字符串。</p>
+<p>encodeURIComponent() 用于参数的传递，参数包含特殊字符可能会造成间断。</p>
+<p>例1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">　　var url = &quot;http://localhost:8080/pro?a=1&amp;b=张三&amp;c=aaa&quot;;</span><br><span class="line">　　encodeURIComponent(url) --&gt; http%3A%2F%2Flocalhost%3A8080%2Fpro%3Fa%3D1%26b%3D%E5%BC%A0%E4%B8%89%26c%3Daaa</span><br></pre></td></tr></table></figure>
+<p>例2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　　var url = &quot;http://localhost:8080/pp?a=1&amp;b=&quot;+ paramUrl,</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">　　var paramUrl = &quot;http://localhost:8080/aa?a=1&amp;b=2&amp;c=3&quot;;</span><br><span class="line">　　应该使用encodeURIComponent()进行转码　　</span><br><span class="line">　　encodeURIComponent(paramUrl) --&gt; http://localhost:8080/pp?a=1&amp;b=http%3A%2F%2Flocalhost%3A8080%2Faa%3Fa%3D1%26b%3D2%23%26c%3D3</span><br></pre></td></tr></table></figure>
+<h3 id="函数封装的url地址的操作"><a href="#函数封装的url地址的操作" class="headerlink" title="函数封装的url地址的操作"></a>函数封装的url地址的操作</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *  URL地址栏操作方法</span></span><br><span class="line"><span class="comment"> * @author     XiaZhicong &lt;dht1986xia@qq.com&gt;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//返回当前URL $_GET对象, 仿PHP模式用法 $_GET['keyword']</span></span><br><span class="line"><span class="keyword">var</span> $_GET = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> url = <span class="built_in">window</span>.document.location.href.toString();</span><br><span class="line">    <span class="keyword">var</span> u = url.split(<span class="string">"?"</span>);</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span>(u[<span class="number">1</span>]) == <span class="string">"string"</span>)&#123;</span><br><span class="line">        u = u[<span class="number">1</span>].split(<span class="string">"&amp;"</span>);</span><br><span class="line">        <span class="keyword">var</span> get = &#123;&#125;;</span><br><span class="line">        $.each(u,<span class="function"><span class="keyword">function</span> (<span class="params">index,value</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> j = value.split(<span class="string">"="</span>);</span><br><span class="line">            get[j[<span class="number">0</span>]] = j[<span class="number">1</span>];</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">return</span> get;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * URL增加参数</span></span><br><span class="line"><span class="comment"> * @param url    url 地址</span></span><br><span class="line"><span class="comment"> * @param name   参数名称</span></span><br><span class="line"><span class="comment"> * @param value  参数值</span></span><br><span class="line"><span class="comment"> * @param type   int，0，没有参数部分，1，已有参数部分</span></span><br><span class="line"><span class="comment"> * @constructor</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">AddUrlParam</span>(<span class="params">url,name,value</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> newUrl=url;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(newUrl.indexOf(<span class="string">'?'</span>)&gt;<span class="number">-1</span> || newUrl.indexOf(<span class="string">'&amp;'</span>)&gt;<span class="number">-1</span>)&#123;</span><br><span class="line">        <span class="comment">//url存在参数部分</span></span><br><span class="line">        <span class="keyword">var</span> Separator=<span class="string">'&amp;'</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">//url不带参数部分</span></span><br><span class="line">        <span class="keyword">var</span> Separator=<span class="string">'?'</span>;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(url.indexOf(<span class="string">'#'</span>)&gt;<span class="number">-1</span>)&#123;</span><br><span class="line">        <span class="comment">//url中存在书签</span></span><br><span class="line">        newUrl=newUrl.replace(<span class="string">'#'</span>, Separator+name+<span class="string">'='</span>+value+<span class="string">'#'</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">//不存在书签</span></span><br><span class="line">        newUrl=newUrl+Separator+name+<span class="string">"="</span>+value;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> newUrl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 删除Url参数</span></span><br><span class="line"><span class="comment"> * @param url   给定URL地址</span></span><br><span class="line"><span class="comment"> * @param name  删除的参数名</span></span><br><span class="line"><span class="comment"> * @returns &#123;*&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">DelUrlParam</span>(<span class="params">url, name</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> delparam = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">var</span> analysisUrl = url.split(<span class="string">"?"</span>);</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span>(analysisUrl[<span class="number">1</span>]) == <span class="string">"string"</span>)&#123;</span><br><span class="line">        analysisUrl = analysisUrl[<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span>(analysisUrl.indexOf(<span class="string">'#'</span>) &gt; <span class="number">-1</span>)&#123;</span><br><span class="line">            <span class="comment">//url中存在书签</span></span><br><span class="line">            analysisUrl = analysisUrl.split(<span class="string">"#"</span>);</span><br><span class="line">            analysisUrl = analysisUrl[<span class="number">0</span>]</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (analysisUrl.indexOf(name)&gt; <span class="number">-1</span>) &#123;</span><br><span class="line">            <span class="keyword">var</span> paramArr = analysisUrl.split(<span class="string">"&amp;"</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; paramArr.length; i++) &#123;</span><br><span class="line">                <span class="keyword">var</span> cparam = paramArr[i].split(<span class="string">"="</span>);</span><br><span class="line">                <span class="keyword">if</span>(cparam[<span class="number">0</span>] === name)&#123;</span><br><span class="line">                    delparam = paramArr[i];</span><br><span class="line">                    <span class="keyword">if</span>(paramArr.length == <span class="number">1</span>)&#123;</span><br><span class="line">                        <span class="comment">//只有一个参数</span></span><br><span class="line">                        delparam = <span class="string">'?'</span>+delparam;</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        <span class="keyword">if</span>(i &gt; <span class="number">0</span>)&#123;</span><br><span class="line">                            <span class="comment">//非第一个参数</span></span><br><span class="line">                            delparam = <span class="string">'&amp;'</span>+delparam;</span><br><span class="line">                        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                            <span class="comment">//第一个参数</span></span><br><span class="line">                            delparam = delparam + <span class="string">'&amp;'</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            url = url.replace(delparam, <span class="string">''</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> url;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 改变URL参数值[正则方式]</span></span><br><span class="line"><span class="comment"> * @param url   URL</span></span><br><span class="line"><span class="comment"> * @param arg   需更新的参数名</span></span><br><span class="line"><span class="comment"> * @param arg_val   新的参数值</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeURLpar</span>(<span class="params">url,arg,arg_val</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> pattern=arg+<span class="string">'=([^&amp;]*)'</span>;</span><br><span class="line">    <span class="keyword">var</span> replaceText=arg+<span class="string">'='</span>+arg_val;</span><br><span class="line">    <span class="keyword">if</span>(url.match(pattern))&#123;</span><br><span class="line">        <span class="keyword">var</span> tmp=<span class="string">'/('</span>+ arg+<span class="string">'=)([^&amp;]*)/gi'</span>;</span><br><span class="line">        tmp=url.replace(<span class="built_in">eval</span>(tmp),replaceText);</span><br><span class="line">        <span class="keyword">return</span> tmp;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(url.match(<span class="string">'[\?]'</span>))&#123;</span><br><span class="line">            <span class="keyword">return</span> url+<span class="string">'&amp;'</span>+replaceText;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> url+<span class="string">'?'</span>+replaceText;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> url+<span class="string">'\n'</span>+arg+<span class="string">'\n'</span>+arg_val;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 更改Url参数值</span></span><br><span class="line"><span class="comment"> * @param url   URL</span></span><br><span class="line"><span class="comment"> * @param name  参数名称</span></span><br><span class="line"><span class="comment"> * @param value 新参数值</span></span><br><span class="line"><span class="comment"> * @returns &#123;*&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeURLparam</span>(<span class="params">url,name,value</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> oldParam = <span class="string">''</span></span><br><span class="line">        ,newParam = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">var</span> analysisUrl = url.split(<span class="string">"?"</span>);</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span>(analysisUrl[<span class="number">1</span>]) == <span class="string">"string"</span>)&#123;</span><br><span class="line">        analysisUrl = analysisUrl[<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span>(analysisUrl.indexOf(<span class="string">'#'</span>) &gt; <span class="number">-1</span>)&#123;</span><br><span class="line">            <span class="comment">//url中存在书签</span></span><br><span class="line">            analysisUrl = analysisUrl.split(<span class="string">"#"</span>);</span><br><span class="line">            analysisUrl = analysisUrl[<span class="number">0</span>]</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (analysisUrl.indexOf(name)&gt; <span class="number">-1</span>) &#123;</span><br><span class="line">            <span class="keyword">var</span> paramArr = analysisUrl.split(<span class="string">"&amp;"</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; paramArr.length; i++) &#123;</span><br><span class="line">                <span class="keyword">var</span> cparam = paramArr[i].split(<span class="string">"="</span>);</span><br><span class="line">                <span class="keyword">if</span>(cparam[<span class="number">0</span>] === name)&#123;</span><br><span class="line">                    oldParam = paramArr[i];</span><br><span class="line">                    <span class="keyword">if</span>(i &gt; <span class="number">0</span>)&#123;</span><br><span class="line">                        <span class="comment">//非第一个参数</span></span><br><span class="line">                        oldParam = <span class="string">'&amp;'</span>+oldParam;</span><br><span class="line">                        newParam = <span class="string">'&amp;'</span>+name +<span class="string">'='</span>+value;</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        <span class="comment">//第一个参数</span></span><br><span class="line">                        oldParam = <span class="string">'?'</span>+oldParam;</span><br><span class="line">                        newParam = <span class="string">'?'</span>+name +<span class="string">'='</span>+value;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            url = url.replace(oldParam, newParam);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> url;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 删除Url中锚点部分</span></span><br><span class="line"><span class="comment"> * @param url</span></span><br><span class="line"><span class="comment"> * @param anchorName</span></span><br><span class="line"><span class="comment"> * @returns &#123;*&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">delChainlink</span>(<span class="params">url,anchorName</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//判断是否有定位</span></span><br><span class="line">    <span class="keyword">if</span>(url.indexOf(<span class="string">"#"</span>) &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        url = url.replace(<span class="string">'#'</span>+ anchorName, <span class="string">''</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> url;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/11/25/javascript中对URL的常用操作/"></a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">魏永召</a></p>
+        <p><span>发布时间:</span>2018-11-25, 20:47:44</p>
+        <p><span>最后更新:</span>2018-11-25, 20:48:26</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/11/25/javascript中对URL的常用操作/" title="">http://yoursite.com/2018/11/25/javascript中对URL的常用操作/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/11/25/javascript中对URL的常用操作/　　作者: 魏永召" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/11/18/移动端项目概述/">
+                    移动端项目概述
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#javascript中对URL的常用操作"><span class="toc-number">1.</span> <span class="toc-text">javascript中对URL的常用操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#获取或设置地址栏中的信息"><span class="toc-number">1.0.1.</span> <span class="toc-text">获取或设置地址栏中的信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#刷新"><span class="toc-number">1.0.2.</span> <span class="toc-text">刷新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#返回"><span class="toc-number">1.0.3.</span> <span class="toc-text">返回</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS中对URL进行转码与解码"><span class="toc-number">1.0.4.</span> <span class="toc-text">JS中对URL进行转码与解码</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#escape-和-unescape"><span class="toc-number">1.0.4.0.1.</span> <span class="toc-text">escape 和 unescape</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#encodeURI-和-decodeURI"><span class="toc-number">1.0.4.0.2.</span> <span class="toc-text">encodeURI 和 decodeURI</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数封装的url地址的操作"><span class="toc-number">1.0.5.</span> <span class="toc-text">函数封装的url地址的操作</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"　| 魏永召的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/11/18/移动端项目概述/" title="下一篇: 移动端项目概述">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/11/25/javascript中对URL的常用操作/">javascript中对URL的常用操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/18/移动端项目概述/">移动端项目概述</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/16/git的基本使用介绍/">git的基本使用介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/14/less/">less</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/14/markdown/">markdown</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/13/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2018 魏永召
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
