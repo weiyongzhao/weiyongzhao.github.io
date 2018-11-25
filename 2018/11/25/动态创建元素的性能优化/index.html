@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="动态创建元素的性能优化我们在工作中总要接触到去动态创建元素，在动态创建元素的时候也存在性能之间的差异。今天大致讲一下动态创建元素时的性能优化 使用遍历的方式进行动态创建例如：给指定的元素内部创建200个div，在循环中使用拼接的方式进行创建。 1234567console.time(&apos;innerHTML&apos;);var box = document.getElementById(&apos;box&apos;);		fo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/11/13/hello-world/index.html">
+<meta property="og:title" content="魏永召的博客">
+<meta property="og:url" content="http://yoursite.com/2018/11/25/动态创建元素的性能优化/index.html">
 <meta property="og:site_name" content="魏永召的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="动态创建元素的性能优化我们在工作中总要接触到去动态创建元素，在动态创建元素的时候也存在性能之间的差异。今天大致讲一下动态创建元素时的性能优化 使用遍历的方式进行动态创建例如：给指定的元素内部创建200个div，在循环中使用拼接的方式进行创建。 1234567console.time(&apos;innerHTML&apos;);var box = document.getElementById(&apos;box&apos;);		fo">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-13T08:57:03.439Z">
+<meta property="og:updated_time" content="2018-11-25T12:51:58.513Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="魏永召的博客">
+<meta name="twitter:description" content="动态创建元素的性能优化我们在工作中总要接触到去动态创建元素，在动态创建元素的时候也存在性能之间的差异。今天大致讲一下动态创建元素时的性能优化 使用遍历的方式进行动态创建例如：给指定的元素内部创建200个div，在循环中使用拼接的方式进行创建。 1234567console.time(&apos;innerHTML&apos;);var box = document.getElementById(&apos;box&apos;);		fo">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hello World | 魏永召的博客</title>
+<title>魏永召的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -257,11 +257,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-动态创建元素的性能优化" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/11/13/hello-world/" class="article-date">
-      <time datetime="2018-11-13T08:57:03.439Z" itemprop="datePublished">2018-11-13</time>
+      <a href="/2018/11/25/动态创建元素的性能优化/" class="article-date">
+      <time datetime="2018-11-25T12:51:19.034Z" itemprop="datePublished">2018-11-25</time>
 </a>
 
 
@@ -272,37 +272,29 @@
       <input type="hidden" class="isFancy">
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Hello World
-    </h1>
-  
-
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-        <div class="clearfix"></div>
-      </div>
-      
-    
     <div class="article-entry" itemprop="articleBody">
       
         
         
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+          <h1 id="动态创建元素的性能优化"><a href="#动态创建元素的性能优化" class="headerlink" title="动态创建元素的性能优化"></a>动态创建元素的性能优化</h1><p>我们在工作中总要接触到去动态创建元素，在动态创建元素的时候也存在性能之间的差异。今天大致讲一下动态创建元素时的性能优化</p>
+<h3 id="使用遍历的方式进行动态创建"><a href="#使用遍历的方式进行动态创建" class="headerlink" title="使用遍历的方式进行动态创建"></a>使用遍历的方式进行动态创建</h3><p>例如：给指定的元素内部创建200个div，在循环中使用拼接的方式进行创建。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.time(<span class="string">'innerHTML'</span>);</span><br><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">200</span>; i++) &#123;</span><br><span class="line">			box.innerHTML += <span class="string">'&lt;div&gt;&lt;/div&gt;'</span>;</span><br><span class="line">		&#125;</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'innerHTML'</span>);</span><br><span class="line">控制台输出：innerHTML: <span class="number">21.8271484375</span>ms</span><br></pre></td></tr></table></figure>
+<p>通过输出执行的时间可以发现这种创建的方式的执行时间在22ms左右。</p>
+<h3 id="进行性能优化"><a href="#进行性能优化" class="headerlink" title="进行性能优化"></a>进行性能优化</h3><h6 id="使用字符串替代"><a href="#使用字符串替代" class="headerlink" title="使用字符串替代"></a>使用字符串替代</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.time(<span class="string">'innerHTML'</span>);</span><br><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">''</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">200</span>; i++) &#123;</span><br><span class="line">	str += <span class="string">'&lt;div&gt;&lt;/div&gt;'</span>;</span><br><span class="line">&#125;</span><br><span class="line">box.innerHTML = str;</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'innerHTML'</span>);</span><br><span class="line">控制台输出：innerHTML: <span class="number">0.300048828125</span>ms</span><br></pre></td></tr></table></figure>
+<p>通过上边的方法可以看到控制台输出的时间是0.3ms，相对于之前的方法的性能提高了几十倍。因为对DOM操作的方式比对字符串操作的执行速度慢。</p>
+<h6 id="使用数组替代执行"><a href="#使用数组替代执行" class="headerlink" title="使用数组替代执行"></a>使用数组替代执行</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.time(<span class="string">'innerHTML'</span>);</span><br><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="keyword">var</span> arr = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">200</span>; i++) &#123;</span><br><span class="line">	arr.push(<span class="string">'&lt;div&gt;&lt;/div&gt;'</span>);</span><br><span class="line">&#125;</span><br><span class="line">box.innerHTML = arr.join(<span class="string">''</span>);</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'innerHTML'</span>);</span><br><span class="line">控制台输出：innerHTML: <span class="number">0.26220703125</span>ms</span><br></pre></td></tr></table></figure>
+<h6 id="使用document-createElement-创建元素"><a href="#使用document-createElement-创建元素" class="headerlink" title="使用document.createElement()创建元素"></a>使用document.createElement()创建元素</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.time(<span class="string">'createElement'</span>);</span><br><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">200</span>; i++) &#123;</span><br><span class="line">	<span class="keyword">var</span> div = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</span><br><span class="line">	box.appendChild(div);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'createElement'</span>);</span><br><span class="line">控制台输出：createElement: <span class="number">0.428955078125</span>ms</span><br></pre></td></tr></table></figure>
+<p>使用document.createElement()的方法创建元素的时间在0.4s左右，性能比innerHTML性能提升了几十倍。但是在结构复杂的情况下使用会比较繁琐。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>使用场景：</p>
+<ul>
+<li>如果结构复杂，使用innerHTML</li>
+<li>其他情况均可以使用document.createElement()</li>
+<li>如果要进行元素创建的结构内部已经具有其他元素，必须document.createElement()</li>
+</ul>
+<p>使用动态创建的情况：</p>
+<ul>
+<li>页面中需要使用“数据驱动”的形式的时候进行动态创建，先设置好要显示结构的数据，再根据数据进行动态创建操作</li>
+</ul>
 
         
       
@@ -312,13 +304,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/11/13/hello-world/">Hello World</a></p>
+        <p><span>本文标题:</span><a href="/2018/11/25/动态创建元素的性能优化/"></a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">魏永召</a></p>
-        <p><span>发布时间:</span>2018-11-13, 16:57:03</p>
-        <p><span>最后更新:</span>2018-11-13, 16:57:03</p>
+        <p><span>发布时间:</span>2018-11-25, 20:51:19</p>
+        <p><span>最后更新:</span>2018-11-25, 20:51:58</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/11/13/hello-world/" title="Hello World">http://yoursite.com/2018/11/13/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/11/13/hello-world/　　作者: 魏永召" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/11/25/动态创建元素的性能优化/" title="">http://yoursite.com/2018/11/25/动态创建元素的性能优化/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/11/25/动态创建元素的性能优化/　　作者: 魏永召" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -330,12 +322,12 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/11/14/markdown/">
-                    markdown
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/11/25/javascript中对URL的常用操作/">
+                    
                 </a>
             </div>
-        
         
     </nav>
 
@@ -345,7 +337,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#动态创建元素的性能优化"><span class="toc-number">1.</span> <span class="toc-text">动态创建元素的性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用遍历的方式进行动态创建"><span class="toc-number">1.0.1.</span> <span class="toc-text">使用遍历的方式进行动态创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进行性能优化"><span class="toc-number">1.0.2.</span> <span class="toc-text">进行性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#使用字符串替代"><span class="toc-number">1.0.2.0.0.1.</span> <span class="toc-text">使用字符串替代</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#使用数组替代执行"><span class="toc-number">1.0.2.0.0.2.</span> <span class="toc-text">使用数组替代执行</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#使用document-createElement-创建元素"><span class="toc-number">1.0.2.0.0.3.</span> <span class="toc-text">使用document.createElement()创建元素</span></a></li></ol></li></ol></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">1.0.3.</span> <span class="toc-text">总结</span></a></li>
         
     </div>
     <style>
@@ -381,7 +373,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Hello World　| 魏永召的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"　| 魏永召的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -401,15 +393,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/11/14/markdown/" title="上一篇: markdown">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2018/11/25/javascript中对URL的常用操作/" title="下一篇: ">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 
